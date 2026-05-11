@@ -112,11 +112,16 @@ function ProjectCard({ project, index }) {
     return () => clearTimeout(t);
   }, [index]);
 
+  const handleCardClick = () => {
+    if (project.url && project.url !== '#') window.open(project.url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div
       className={`project-card proj-${index}`}
       onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}>
+      onMouseLeave={() => setHovered(false)}
+      onClick={handleCardClick}>
 
       {!loaded && <div className="skeleton" style={{ position: 'absolute', inset: 0 }} />}
 
@@ -489,7 +494,7 @@ function ContactForm() {
         <div className="form-status success">✓ Enviado. Te respondo en menos de 24h.</div>
       }
       {status === 'error' &&
-        <div className="form-status error">Algo falló. Escríbeme a hola@jdsdev.com</div>
+        <div className="form-status error">Algo falló. Escríbeme a jldelossantos.san@gmail.com</div>
       }
 
       <button className="form-submit" type="submit" disabled={status === 'sending'}>

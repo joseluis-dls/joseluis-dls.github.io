@@ -54,7 +54,7 @@ nav.scrolled {
 }
 .nav-logo {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 10px;
   letter-spacing: 0.08em;
   color: var(--gray);
   z-index: 101;
@@ -64,13 +64,13 @@ nav.scrolled {
 
 .nav-links {
   display: flex;
-  gap: 36px;
+  gap: 24px;
   list-style: none;
 }
 .nav-links a {
   font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.1em;
+  font-size: 10px;
+  letter-spacing: 0.08em;
   color: var(--gray);
   text-decoration: none;
   text-transform: uppercase;
@@ -274,12 +274,15 @@ nav.scrolled {
   align-items: center;
 }
 .pitch-body { /* left column */ }
-.pitch-terminal-body {
-  height: 310px;
-  overflow: hidden;
-}
 .pitch-grid .terminal-window {
   margin-top: 0;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+}
+.pitch-terminal-body {
+  flex: 1;
+  overflow: hidden;
 }
 .pt-code {
   margin-bottom: 16px;
