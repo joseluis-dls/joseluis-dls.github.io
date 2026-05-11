@@ -158,7 +158,14 @@ function ProjectCard({ project, index }) {
 
       <div className="card-content">
         <div className="card-label" style={{ color: project.accent }}>{project.label}</div>
-        <div className="card-name">{project.name}</div>
+        <div className="card-name-row">
+          <div className="card-name">{project.name}</div>
+          {project.url && project.url !== '#' &&
+            <a href={project.url} className="card-inline-link" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(project.url, '_blank', 'noopener,noreferrer'); }}>
+              Ver →
+            </a>
+          }
+        </div>
       </div>
 
       <div className="card-reveal">

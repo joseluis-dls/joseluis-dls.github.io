@@ -65,8 +65,7 @@ function App() {
           <li><a href="#pitch"    onClick={closeNav} className={navActive('pitch')}>Propuesta</a></li>
           <li><a href="#projects" onClick={closeNav} className={navActive('projects')}>Proyectos</a></li>
           <li><a href="#skills"   onClick={closeNav} className={navActive('skills')}>Skills</a></li>
-          <li><a href="#process"  onClick={closeNav} className={navActive('process')}>Proceso</a></li>
-          <li><a href="#funnel"   onClick={closeNav} className={navActive('funnel')}>Contacto</a></li>
+          <li><a href="#process"  onClick={closeNav} className={activeSection === 'process' || activeSection === 'funnel' ? 'active' : ''}>Colaboremos</a></li>
         </ul>
         <button
           className={`nav-hamburger ${navOpen ? 'open' : ''}`}
@@ -84,7 +83,7 @@ function App() {
             {AVAILABLE ? 'Available for projects' : 'Currently unavailable'}
           </div>
           <h1 className="hero-name hero-anim d1">
-            <span className="glitch-wrap">JDS</span>{' Studio'}
+            <span className="glitch-wrap">JDS Studio</span>
           </h1>
           <p className="hero-role hero-anim d2">Desarrollo Front-End &amp; UX</p>
           <p className="hero-sub hero-anim d2">
@@ -137,7 +136,8 @@ function App() {
         <div className="pitch-grid fade-up">
           <div className="pitch-body">
             <p className="pitch-quote">
-              No es solo diseño —<br />es <strong>código limpio y criterio</strong> construido proyecto a proyecto.
+              Si vienes de uno de mis proyectos,<br />ya sabes lo que puedo hacer por el <strong>tuyo</strong>.<br /><br />
+              No es solo diseño — es <strong>código</strong> limpio y <strong>criterio</strong> construido proyecto a proyecto.
             </p>
             <a className="pitch-cta" href="#funnel">
               Quiero un proyecto
@@ -152,7 +152,7 @@ function App() {
       <section id="projects">
         <div className="section-header fade-up">
           <div>
-            <div className="section-tag">// proyectos destacados</div>
+            <div className="section-tag">// proyectos desplegados</div>
             <h2 className="section-title">Showroom</h2>
           </div>
           <div className="section-count">02 / 04</div>

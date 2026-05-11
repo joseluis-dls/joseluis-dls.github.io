@@ -435,6 +435,25 @@ nav.scrolled {
   transform: translateY(0);
 }
 
+.card-name-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+.card-inline-link {
+  display: none;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--gray);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+.card-inline-link:hover { color: var(--white); }
+
 .card-label {
   font-family: var(--font-mono);
   font-size: 10px;
@@ -997,10 +1016,17 @@ body::after {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
+    justify-content: flex-start;
+    padding-top: 20px;
+    overflow: hidden;
   }
   .project-card .card-bg {
     transform: scale(1.06);
     filter: blur(2px) brightness(0.35);
+  }
+  /* hide tech chips — already faded but still faintly visible */
+  .project-card .card-bg > div {
+    opacity: 0;
   }
   .project-card .card-content {
     background: linear-gradient(to top, oklch(5% 0 0 / 0.95) 0%, oklch(5% 0 0 / 0.1) 100%);
@@ -1059,11 +1085,35 @@ body::after {
 
   .bento-grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 260px;
+    grid-auto-rows: 300px;
   }
   .proj-0 { grid-column: span 2; }
   .proj-1 { grid-column: span 2; }
   .proj-2 { grid-column: span 2; }
+
+  /* Cards: always show reveal, hide background chips */
+  .project-card .card-bg > div { opacity: 0 !important; }
+  .project-card .card-bg {
+    transform: scale(1.06);
+    filter: blur(2px) brightness(0.35);
+  }
+  .project-card .card-content {
+    background: linear-gradient(to top, oklch(5% 0 0 / 0.95) 0%, oklch(5% 0 0 / 0.1) 100%);
+  }
+  .card-reveal {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    justify-content: flex-start;
+    padding-top: 14px;
+    gap: 8px;
+    overflow: hidden;
+    bottom: 68px;
+  }
+  /* hide metric chips and visit button — link is in card-content instead */
+  .card-reveal > div:nth-child(3) { display: none !important; }
+  .card-visit-btn { display: none !important; }
+  .card-inline-link { display: inline; }
 
   .pitch-grid { grid-template-columns: 1fr; gap: 40px; }
 

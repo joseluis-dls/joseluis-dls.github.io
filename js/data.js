@@ -12,8 +12,8 @@ const PROJECTS = [
   tech: ["HTML", "CSS", "JavaScript"],
   color: "#1A0808",
   accent: "#D94040",
-  description: "Presencia digital para empresa de maquinaria pesada y transportes especiales.",
-  metrics: ["Responsive", "SEO local", "Captación leads"],
+  description: "Presencia digital para empresa de transporte. Diseño limpio, orientado a captación de clientes B2B.",
+  metrics: ["Responsive", "SEO Optimizado", "Leads B2B"],
   url: "https://www.sandemaq.com/"
 },
 {
@@ -24,8 +24,8 @@ const PROJECTS = [
   tech: ["HTML", "CSS", "JavaScript"],
   color: "#0F1B2D",
   accent: "#2C74D4",
-  description: "Landing corporativa para empresa de transporte. Diseño limpio, orientado a captación de clientes B2B.",
-  metrics: ["Mobile-first", "< 1s load", "SEO optimizado"],
+  description: "Presencia digital para empresa de transporte. Diseño limpio, orientado a captación de clientes B2B.",
+  metrics: ["Responsive", "SEO Optimizado", "Leads B2B"],
   url: "https://ordunatransportes.com/"
 },
 {
